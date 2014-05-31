@@ -1,0 +1,36 @@
+<?php
+echo"2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+<br>
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+<br><form action='' method='post'><input type='hidden' name='max'><input type='submit' value='Start'></form>";
+if(isset($_POST['max']))
+{
+$result=array();
+function divisible($number,$min,$max)
+	{
+	$error=0;
+	for($i=$min;$i<=$max;$i++)
+		{
+			if(fmod($number,$i) != 0){
+				$error=1;
+				break;
+			}
+		}
+		if($error == 1){
+		return false;
+		}
+		else
+			return true;
+	}
+	$j=20;
+while(true)
+	{
+	if(divisible($j,1,20)){
+		$result[]=$j;
+		break;
+		}
+		$j+=20;
+	}
+echo"<br><b>Result: </b>". min($result);
+}
+?>

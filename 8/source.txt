@@ -1,0 +1,25 @@
+<?
+echo"<form action='' method='post'><input type='hidden' name='max'><input type='submit' value='Start'></form>";
+if(isset($_POST['max'])){
+$max=0;
+function product($part){
+	global $max;
+$num1=(int)(substr($part,0,1));
+$num2=(int)(substr($part,1,1));
+$num3=(int)(substr($part,2,1));
+$num4=(int)(substr($part,3,1));
+$num5=(int)(substr($part,4,1));
+if($num1 == 0){return;}
+else
+	{
+$result=$num1*$num2*$num3*$num4*$num5;
+	}
+if($result > $max){$max=$result;}
+}
+for($i=0;$i<strlen($number);$i++)
+	{
+product(substr($number,$i,5));
+	}
+echo"<br><b>Result: </b> {$max}";
+}
+?>

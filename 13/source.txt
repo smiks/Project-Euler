@@ -1,0 +1,22 @@
+<?php
+echo"<form action='' method='post'><input type='submit' value='Start' name='start'></form>";
+if(isset($_POST['start'])){
+$ourFileName="number.txt";
+$array=array();
+$sum=0;
+if(file_exists($ourFileName))
+		{
+//polnjenje
+$fh = fopen($ourFileName, 'r') or die("Can't open file");
+for($i=0;$i<100;$i++)
+	{
+$number=fgets($fh, filesize($ourFileName));
+$sum+=$number;
+	}
+fclose($fh);
+		}
+		$firstten=substr($sum,0,11);
+		$first=$firstten*1000000000;
+		echo"<br><b>Result: </b>{$first}";
+}
+?>

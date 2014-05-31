@@ -1,0 +1,27 @@
+<?php
+echo"<form action='' method='post'><input type='text' name='max'><input type='submit'></form>";
+if(isset($_POST['max']))
+{
+$max = $_POST['max'];
+$sqrt=sqrt($max);
+function isPrime($number) {
+$sqrtn = intval(sqrt($number));
+//won't work for 0-2
+	for($i=3; $i<=$sqrtn; $i+=2) {
+		if($number%$i == 0) {
+			return false;
+		}
+	}
+return true;
+}    
+    $primes = array();
+    for($i=3; $i<=$sqrt; $i++) {
+        if(fmod($max, $i) == 0) {
+            if(isPrime($i)) {
+                $primes[] = $i;
+            }
+        }
+    }
+    echo"<br><b>Result: </b>". max($primes);  
+}   
+?>
