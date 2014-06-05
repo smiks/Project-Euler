@@ -1,7 +1,4 @@
 <?php
-echo"<form action='' method='post'><input type='submit' value='Start' name='start'></form>";
-if(isset($_POST['start'])){
-$start=microtime();
 $longest=0;$num=0;
 function test($number)
 	{
@@ -39,8 +36,6 @@ while($nm > 1)
 		}
 		$asteps[$i]=$steps;
 	}
-$end=microtime()-$start;
-	echo"<li>Number: {$num} steps: {$steps} in {$end} seconds";
-	
-}
+	echo"\n Result: {$num}";
+
 ?>

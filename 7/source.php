@@ -1,9 +1,6 @@
-What is the 10 001st prime number?<br>
 <?php
-echo"<form action='' method='post'>Enter number:<input type='text' name='number' value='{$_POST['number']}'>
-<input type='submit' value='Submit'></form>";
-if(isset($_POST['number'])){
-$num=$_POST['number'];$sqrt=(int)(sqrt($num));
+$num=1000000;
+$sqrt=(int)(sqrt($num));
 for($i=0;$i<$num;$i++)
 	{
 	$primes[$i] = (!($i == 2 || $i%2 == 0 || $i == 0 || $i == 1));
@@ -26,6 +23,5 @@ for($i=2;$i<$num;$i++)
 if($primes[$i]){$count++;}
 if($count == 10001){$result=$i;break;}
 	}
-echo"<br>Result: {$result} count($count)";
-}
+echo"\n Result: {$result}";
 ?>

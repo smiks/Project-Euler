@@ -1,6 +1,4 @@
 <?php
-echo"<form action='' method='post'><input type='submit' value='Start' name='start'></form>";
-if(isset($_POST['start'])){
 $max=0;$hor=0;$ver=0;$dia=0;$result=array();
 function product($part){
 	global $max;
@@ -103,17 +101,6 @@ $dia=$max;
 	$result[]=$ver;
 	$result[]=$dia;
 	$res=max($result);
-echo"<br><li>Max horizontal: {$hor} vertical: {$ver} diagonal: {$dia} <b>result:</b> {$res}";
-//izpis
-//	for($i=0;$i<20;$i++)
-//	{
-//		for($j=0;$j<20;$j++)
-//		{
-//			$r=$array[$i][$j];
-//			echo"{$r} ";
-//		}
-//		echo"<br>";
-//	}
-}
+echo"\n Result: {$res}";
 
 ?>

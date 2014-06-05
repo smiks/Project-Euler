@@ -1,8 +1,4 @@
 <?php
-echo"Calculating largest palindrome made from the product of two 3-digit numbers
-<br><form action='' method='post'><input type='hidden' name='max'><input type='submit' value='Start'></form>";
-if(isset($_POST['max']))
-{
 $largest=0;
 function isPalindrome($number) {
 	global $largest;
@@ -22,6 +18,5 @@ function isPalindrome($number) {
 		isPalindrome($result);
 		}
     }
-    echo"<br><b>Result: </b>".$largest;  
-}   
+    echo"\n Result: {$largest}";  
 ?>

@@ -1,7 +1,5 @@
 <?php
-echo"<form action='' method='post'>Number: <input type='text' name='num'><input type='submit' value='Start' name='start'></form>";
-if(isset($_POST['start'])){
-	$limit=$_POST['num'];
+	$limit=500;
 function sum($min,$max)
 	{
 $sum=($min+$max)*($max/2);
@@ -27,13 +25,11 @@ while($cd < $limit)
 	//echo"<li>{$new} divisors:{$cd}";
 	$start=$start+1;
 	}
-	echo"<li>{$new}  divisors:{$cd}";
+	echo"\n Result: {$new}  divisors:{$cd}";
 /*
 * 100 | 1,2,4,5,10,20,25,50,100 = 9
 * 200 | 1,2,4,5,8,10,20,25,40,50,100,200 = 12
 *
 *
 */
-
-}
 ?>

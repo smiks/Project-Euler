@@ -1,8 +1,5 @@
 <?php
-echo"<form action='' method='post'><input type='text' name='max'><input type='submit'></form>";
-if(isset($_POST['max']))
-{
-$max = $_POST['max'];
+$max = 600851475143;
 $sqrt=sqrt($max);
 function isPrime($number) {
 $sqrtn = intval(sqrt($number));
@@ -22,6 +19,5 @@ return true;
             }
         }
     }
-    echo"<br><b>Result: </b>". max($primes);  
-}   
+    echo"\n Result: ". max($primes);
 ?>

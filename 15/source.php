@@ -1,20 +1,16 @@
 <?php
-echo"<form action='' method='post'><input type='text' name='mesto'><input type='submit' value='Start' name='start'></form>";
-if(isset($_POST['start'])){
-
 /*
-Program deluje po principu
 The Matrix
 2 3 4 5 6 
 3 6 10 15 21 
 4 10 20 35 56 
 5 15 35 70 126 
 6 21 56 126 252
-resitve so diagonala
+result is diagonal of matrix
 */
 $array=array();
 $array2=array();
-$mesto=(int)($_POST['mesto']);
+$mesto=20; /*20x20*/
 for($i=2;$i<$mesto+2;$i++)
 	{
 	$array2[$i][1]=$i; //echo"<li><u>filling i: {$i}</u>";
@@ -43,6 +39,6 @@ for($i=2;$i<$mesto+2;$i++)
 		}
 	}
 	$result=$array2[$mesto+1][$mesto];
-	echo"<br><b>Result: </b> {$result}";
+	echo"\n Result: {$result}";
 }
 ?>
