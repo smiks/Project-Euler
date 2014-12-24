@@ -61,7 +61,7 @@ def checkPrimeFactors(a, b, c, d):
 
     return len(factors) == 16 # 16 because we need 4 distinct prime factors for each number, a, b, c and d
 
-for i in range(134000, 200000):
+for i in range(100000, 200000):
     if checkPrimeFactors(i, i+1, i+2, i+3):
         print("Result: ", i)
         break;
