@@ -1,13 +1,6 @@
-from cooltools import cooltools
-ct = cooltools()
-
-factorials = [ i for i in ct.factorialsGenerator(100) ]
-
-def getFactorial(a):
-    return factorials[a-1]
-
+from math import factorial
 def combinations(n,r):
-    return (getFactorial(n) / (getFactorial(r) * getFactorial(n-r)))
+    return (factorial(n) / (factorial(r) * factorial(n-r)))
 
 limit = 100
 result = 0
