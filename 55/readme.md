@@ -1,0 +1,1 @@
+With using cache (set implementation) algorithm called isLychrel function 12% less times.
